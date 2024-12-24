@@ -21,6 +21,7 @@ bindkey '\e[A' history-search-backward
 bindkey '\e[B' history-search-forward
 setopt NO_BEEP
 
+alias vim="nvim"
 alias ls=lsd
 alias lsl='lsd -l'
 # FUNCTIONS
