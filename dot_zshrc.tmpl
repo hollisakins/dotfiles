@@ -1,0 +1,35 @@
+# p10k instant prompt (must be first)
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+	source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+# History
+HISTFILE=$HOME/.zhistory
+HISTSIZE=1000
+SAVEHIST=999
+setopt share_history
+setopt hist_expire_dups_first
+setopt hist_ignore_dups
+setopt hist_verify
+bindkey '\e[A' history-search-backward
+bindkey '\e[B' history-search-forward
+setopt NO_BEEP
+
+# Load modules
+for f in \
+	exports \
+	completions \
+	aliases \
+	functions \
+	beagle \
+	conda \
+	plugins
+do
+	if [[ -f "$HOME/.zsh/$f.zsh" ]]; then
+		source "$HOME/.zsh/$f.zsh"
+	fi
+done
+
+# Juliaup (managed by juliaup)
+path=('/Users/hba423/.juliaup/bin' $path)
+export PATH

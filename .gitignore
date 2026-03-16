@@ -1,0 +1,5 @@
+# macOS
+.DS_Store
+
+# Machine-specific (not managed by chezmoi)
+dot_zsh/local.zsh

@@ -1,0 +1,46 @@
+# Directories
+export DRIVE=$HOME/Dropbox/
+export RESEARCH=$DRIVE/research/
+export CODES=$HOME/codes/
+
+# PATH
+export PATH=$HOME/opt/homebrew/bin:$PATH
+export PATH=/Library/TeX/texbin:$PATH
+export PATH=$HOME/opt/miniforge3/bin:$PATH
+export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/.rbenv/shims:$PATH"
+export PATH="$PATH:/Users/hba423/.julia/bin:/Users/hba423/.bin"
+export PATH="$HOME/.local/bin:$PATH"
+
+# Homebrew
+export HOMEBREW_NO_ENV_HINTS="true"
+
+# Appearance
+export TERM="xterm-256color"
+export LSCOLORS="Gxfxxxxxbxegedabagacad"
+
+# Astronomy tools
+export pandeia_refdata='/data/pandeia/'
+export PYSYN_CDBS='/data/synphot1/grp/redcat/trds/'
+export SPS_HOME=$CODES/python-fsps/src/fsps/libfsps
+export CLOUDY_DATA_PATH=$CODES/cloudy/data
+export CLOUDY_EXE=$CODES/cloudy/source/cloudy.exe
+export WEBBPSF_PATH=$CODES/webbpsf-data
+export CRDS_PATH=$CODES/crds_cache/
+export CRDS_SERVER_URL=https://jwst-crds.stsci.edu
+export PGPLOT_FONT='/opt/homebrew/share/grfont.dat'
+export CMAKE_MACROS=$CODES/cmake-macros/
+export bc03=$CODES/bc03/src/
+
+# OpenMPI
+export OMPI_MCA_shmem_mmap_enable_nfs_warning=0
+
+# Secrets (1Password)
+export CAMPFIRE_ROOT=$HOME/simmons/campfire-data/
+export CAMPFIRE_SUPABASE_URL="{{ onepasswordRead "op://zsh/campfire_supabase/url" }}"
+export CAMPFIRE_SUPABASE_SERVICE_ROLE_KEY="{{ onepasswordRead "op://zsh/campfire_supabase/service_role_key" }}"
+export CAMPFIRE_R2_BUCKET_NAME="{{ onepasswordRead "op://zsh/campfire_r2/bucket_name" }}"
+export CAMPFIRE_R2_ACCOUNT_ID="{{ onepasswordRead "op://zsh/campfire_r2/account_id" }}"
+export CAMPFIRE_R2_ACCESS_KEY_ID="{{ onepasswordRead "op://zsh/campfire_r2/access_key_id" }}"
+export CAMPFIRE_R2_SECRET_ACCESS_KEY="{{ onepasswordRead "op://zsh/campfire_r2/secret_access_key" }}"
+export MAST_API_TOKEN="{{ onepasswordRead "op://zsh/mast_api/credential" }}"

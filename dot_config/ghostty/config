@@ -1,0 +1,38 @@
+# ~/.config/ghostty/config
+
+# ── Shell ─────────────────────────────────────────────────────────────────────
+shell-integration = zsh
+
+# ── Theme ─────────────────────────────────────────────────────────────────────
+theme = dark:Catppuccin Mocha,light:Catppuccin Latte
+
+# ── Transparency & Blur ───────────────────────────────────────────────────────
+background-opacity = 0.90
+background-blur-radius = 20
+
+# ── Font ──────────────────────────────────────────────────────────────────────
+# Monaspace has 5 variants — Neon is the most terminal-appropriate
+font-family = "MonaspiceAr Nerd Font"
+font-size = 14
+
+# ── Window ────────────────────────────────────────────────────────────────────
+macos-titlebar-style = tabs
+window-padding-x = 8
+window-padding-y = 6
+
+# ── Tabs ──────────────────────────────────────────────────────────────────────
+keybind = super+one=goto_tab:1
+keybind = super+two=goto_tab:2
+keybind = super+three=goto_tab:3
+keybind = super+four=goto_tab:4
+keybind = super+five=goto_tab:5
+keybind = super+six=goto_tab:6
+keybind = super+seven=goto_tab:7
+keybind = super+eight=goto_tab:8
+keybind = super+nine=goto_tab:9
+keybind = super+shift+left=move_tab:-1
+keybind = super+shift+right=move_tab:1
+
+# ── Misc ──────────────────────────────────────────────────────────────────────
+confirm-close-surface = true
+copy-on-select = true
