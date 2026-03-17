@@ -1,0 +1,15 @@
+Host candide
+  Hostname candid03.iap.fr
+  User hakins
+  IdentityFile ~/.ssh/id_rsa_candide
+  ProxyCommand sh -c 'ping -c 1 -s 999 %h; nc %h %p'
+
+Host ls6
+  Hostname ls6.tacc.utexas.edu
+  User hba423
+  IdentityFile ~/.ssh/id_rsa_tacc
+
+Host aws
+  Hostname ec2-3-139-62-38.us-east-2.compute.amazonaws.com
+  User ec2-user
+  IdentityFile ~/.ssh/awscwt.pem

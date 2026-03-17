@@ -1,0 +1,22 @@
+{
+    "security.workspace.trust.untrustedFiles": "open",
+    "terminal.integrated.inheritEnv": false,
+    "terminal.integrated.fontFamily": "MesloLGM Nerd Font Mono",
+    "window.zoomLevel": 2,
+    "explorer.confirmDragAndDrop": false,
+    "editor.renderWhitespace": "boundary",
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    },
+    "editor.rulers": [
+    ],
+    "python.defaultInterpreterPath": "/Users/hba423/miniforge3/bin/python",
+    "editor.inlineSuggest.edits.allowCodeShifting": "never",
+    "github.copilot.nextEditSuggestions.fixes": false,
+    "editor.semanticHighlighting.enabled": false,
+    "editor.showUnused": false,
+    "claudeCode.preferredLocation": "panel"
+}

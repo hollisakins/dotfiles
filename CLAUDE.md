@@ -23,6 +23,11 @@ Chezmoi naming conventions: `dot_` prefix → `.` in target, `.tmpl` suffix → 
 
 ### Git
 - `dot_gitconfig` → `~/.gitconfig` — user identity, push config, credential helpers
+- `dot_config/git/ignore` → `~/.config/git/ignore` — global gitignore
+
+### SSH
+- `dot_ssh/config` → `~/.ssh/config` — host aliases and identity file references
+- SSH keys are NOT managed — device-specific, can be stored in 1Password if needed
 
 ### Apps (`dot_config/` → `~/.config/`)
 - `ghostty/config` — terminal: Catppuccin theme, Monaspace font, transparency, keybinds
@@ -30,10 +35,18 @@ Chezmoi naming conventions: `dot_` prefix → `.` in target, `.tmpl` suffix → 
 - `gh/private_config.yml` — GitHub CLI settings (hosts.yml excluded — contains OAuth token)
 - `lsd/config.yaml` — lsd file listing config
 
+### VS Code
+- `private_Library/.../Code/User/settings.json` — editor settings, Python config, copilot prefs
+- `private_Library/.../Code/User/keybindings.json` — custom keybindings
+
+### Homebrew
+- `Brewfile` — all brew/cask/vscode-extension packages (`brew bundle install` to restore)
+
 ## Secrets
 - All secrets stored in 1Password vault "zsh", injected via `{{ onepasswordRead "op://zsh/..." }}` in `.tmpl` files
 - Never hardcode secrets or API keys anywhere in this repo
 - `gh/hosts.yml` is NOT managed — contains OAuth tokens
+- SSH keys are NOT managed — device-specific
 
 ## Conventions
 - New aliases go in `dot_zsh/aliases.zsh` with a comment explaining the command
