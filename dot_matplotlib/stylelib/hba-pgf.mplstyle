@@ -1,0 +1,10 @@
+# hba-pgf — PGF/LaTeX backend
+# Uses the PGF backend for native LaTeX rendering with Palatino + Asana Math.
+# Produces .pgf files that can be \input{} directly into LaTeX documents.
+#
+# Usage:
+#   plt.style.use(['hba', 'hba-pgf'])
+
+# ── PGF backend ──────────────────────────────────────────────────────────────
+pgf.rcfonts             : False
+pgf.preamble            : \usepackage{unicode-math} \setmainfont{Palatino} \setmathfont{Asana Math}

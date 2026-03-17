@@ -1,0 +1,13 @@
+# hba-pgf-times — PGF/LaTeX backend with Times-like font
+# Uses the PGF backend with TeX Gyre Termes (Times) + matching math font.
+# Use instead of hba-pgf when the target document uses Times.
+#
+# Usage:
+#   plt.style.use(['hba', 'hba-pgf-times'])
+
+# ── Font ─────────────────────────────────────────────────────────────────────
+font.serif              : TeX Gyre Termes
+
+# ── PGF backend ──────────────────────────────────────────────────────────────
+pgf.rcfonts             : False
+pgf.preamble            : \usepackage{unicode-math} \setmainfont{TeX Gyre Termes} \setmathfont{TeX Gyre Termes Math}

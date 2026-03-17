@@ -1,0 +1,52 @@
+# hba — base style
+# Default serif (Palatino) with usetex. Defines figure layout, tick styling,
+# and common defaults shared by all other hba-* styles.
+#
+# Usage:
+#   plt.style.use('hba')
+#   plt.style.use(['hba', 'hba-sans'])          # stack with other hba-* styles
+#   plt.style.use(['hba', 'hba-dark'])           # dark mode
+#   plt.style.use(['hba', 'hba-presentation'])   # slides
+
+# ── Figure ───────────────────────────────────────────────────────────────────
+figure.figsize          : 4, 3.5
+figure.dpi              : 200
+savefig.dpi             : 300
+figure.constrained_layout.use : True
+
+# ── Font ─────────────────────────────────────────────────────────────────────
+font.family             : serif
+font.serif              : Palatino
+font.size               : 8
+legend.fontsize         : 7
+text.usetex             : True
+
+# ── Ticks ────────────────────────────────────────────────────────────────────
+# Inward ticks on all four sides with minor ticks visible
+xtick.direction         : in
+ytick.direction         : in
+xtick.top               : True
+ytick.right             : True
+xtick.minor.visible     : True
+ytick.minor.visible     : True
+xtick.major.width       : 0.6
+xtick.minor.width       : 0.4
+xtick.major.size        : 2.8
+xtick.minor.size        : 1.7
+ytick.major.width       : 0.6
+ytick.minor.width       : 0.4
+ytick.major.size        : 2.8
+ytick.minor.size        : 1.7
+
+# ── Axes ─────────────────────────────────────────────────────────────────────
+axes.linewidth          : 0.6
+
+# ── Lines ────────────────────────────────────────────────────────────────────
+lines.linewidth         : 1
+errorbar.capsize        : 2
+
+# ── Legend ────────────────────────────────────────────────────────────────────
+legend.frameon          : False
+
+# ── Images ───────────────────────────────────────────────────────────────────
+image.origin            : lower

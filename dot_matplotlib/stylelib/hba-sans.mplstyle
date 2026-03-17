@@ -1,0 +1,21 @@
+# hba-sans — sans-serif font override
+# Switches to TeX Gyre Heros (Helvetica-like) with custom mathtext rendering.
+# Disables usetex so it works without a LaTeX installation.
+#
+# Usage:
+#   plt.style.use(['hba', 'hba-sans'])
+
+# ── Font ─────────────────────────────────────────────────────────────────────
+font.family             : sans-serif
+font.sans-serif         : TeX Gyre Heros
+text.usetex             : False
+
+# ── Mathtext ─────────────────────────────────────────────────────────────────
+# Custom mathtext config so math renders in the same font as body text
+mathtext.fontset        : custom
+mathtext.rm             : TeX Gyre Heros
+mathtext.it             : TeX Gyre Heros:italic
+mathtext.bf             : TeX Gyre Heros:bold
+mathtext.tt             : TeX Gyre Heros
+mathtext.cal            : TeX Gyre Heros
+mathtext.sf             : TeX Gyre Heros

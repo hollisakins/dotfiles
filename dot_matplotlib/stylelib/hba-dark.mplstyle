@@ -1,0 +1,18 @@
+# hba-dark — dark color scheme
+# Black background with white text, ticks, and axes. Stackable on top of any
+# other hba style — does not change fonts, sizes, or layout.
+#
+# Usage:
+#   plt.style.use(['hba', 'hba-dark'])
+#   plt.style.use(['hba', 'hba-sans', 'hba-dark'])
+
+# ── Colors ───────────────────────────────────────────────────────────────────
+text.color              : white
+axes.facecolor          : black
+axes.edgecolor          : white
+axes.labelcolor         : white
+xtick.color             : white
+ytick.color             : white
+figure.facecolor        : black
+savefig.facecolor       : black
+lines.color             : white

@@ -1,0 +1,17 @@
+# hba-presentation — overrides for slides/talks
+# Larger text and bolder weights for readability on projected screens.
+# Switches to sans-serif (Helvetica) and disables usetex for portability.
+# Stackable — apply after hba and optionally hba-dark.
+#
+# Usage:
+#   plt.style.use(['hba', 'hba-presentation'])
+#   plt.style.use(['hba', 'hba-dark', 'hba-presentation'])
+
+# ── Font ─────────────────────────────────────────────────────────────────────
+font.family             : sans-serif
+font.sans-serif         : Helvetica
+font.size               : 12
+font.weight             : bold
+legend.fontsize         : 10
+text.usetex             : False
+axes.labelweight        : bold
