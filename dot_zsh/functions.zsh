@@ -8,6 +8,16 @@ fdiff() {
   diff -u "$1" "$2" | diff-so-fancy
 }
 
+# Run claude bugfix skill (-i for interactive mode)
+bugfix() {
+  claude --allowedTools "Edit,MultiEdit,Write,Bash(*)" -- "/bugfix $1"
+}
+
+# Run claude feat-request skill (-i for interactive mode)
+feature() {
+  claude --allowedTools "Edit,MultiEdit,Write,Bash(*)" -- "/feature $1"
+}
+
 tarf() {
   local pattern output pigz_threads=8
 
