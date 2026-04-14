@@ -19,6 +19,10 @@ font-size = 14
 macos-titlebar-style = tabs
 window-padding-x = 8
 window-padding-y = 6
+keybind = super+enter=toggle_split_zoom
+keybind = super+shift+enter=toggle_fullscreen
+keybind = super+left_bracket=goto_split:previous
+keybind = super+right_bracket=goto_split:next
 
 # ── Tabs ──────────────────────────────────────────────────────────────────────
 keybind = super+one=goto_tab:1

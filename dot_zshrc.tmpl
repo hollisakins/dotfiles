@@ -31,5 +31,5 @@ do
 done
 
 # Juliaup (managed by juliaup)
-path=('/Users/hba423/.juliaup/bin' $path)
+path=('{{ .chezmoi.homeDir }}/.juliaup/bin' $path)
 export PATH

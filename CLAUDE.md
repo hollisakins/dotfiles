@@ -3,7 +3,7 @@
 ## Overview
 Managed with chezmoi. Secrets injected via 1Password CLI at apply-time — never stored in the repo.
 
-chezmoi source dir: `/Users/hba423/codes/dotfiles` (set in `~/.config/chezmoi/chezmoi.toml`)
+chezmoi source dir: set via `~/.config/chezmoi/chezmoi.toml` (machine-specific)
 
 ## Structure
 Chezmoi naming conventions: `dot_` prefix → `.` in target, `.tmpl` suffix → processed as Go template, `private_` prefix → 0600 permissions.

@@ -1,11 +1,18 @@
+Host *
+  ServerAliveInterval 60
+  ServerAliveCountMax 3
+
+Host patrick
+  HostName 10.149.221.56
+  User hba423
+  IdentityFile ~/.ssh/id_rsa_patrick
+
 Host candide
   Hostname candid03.iap.fr
   User hakins
   IdentityFile ~/.ssh/id_rsa_candide
   ProxyCommand sh -c 'ping -c 1 -s 999 %h; nc %h %p'
-  ServerAliveInterval 60
-  ServerAliveCountMax 3
-  
+
 Host ls6
   Hostname ls6.tacc.utexas.edu
   User hba423
