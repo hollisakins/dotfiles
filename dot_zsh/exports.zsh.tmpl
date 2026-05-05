@@ -26,7 +26,8 @@ export SPS_HOME=$CODES/python-fsps/src/fsps/libfsps
 export CLOUDY_DATA_PATH=$CODES/cloudy/data
 export CLOUDY_EXE=$CODES/cloudy/source/cloudy.exe
 export WEBBPSF_PATH=$CODES/webbpsf-data
-export CRDS_PATH=$CODES/crds_cache/
+export CAMPFIRE_ROOT=$HOME/simmons/campfire-data/
+export CRDS_PATH=$CAMPFIRE_ROOT/cache/crds/
 export CRDS_SERVER_URL=https://jwst-crds.stsci.edu
 export PGPLOT_FONT='/opt/homebrew/share/grfont.dat'
 export CMAKE_MACROS=$CODES/cmake-macros/
@@ -37,7 +38,6 @@ export OMPI_MCA_shmem_mmap_enable_nfs_warning=0
 export OMPI_MCA_btl=^sm,vader
 
 # Secrets (1Password)
-export CAMPFIRE_ROOT=$HOME/simmons/campfire-data/
 export CAMPFIRE_SUPABASE_URL="{{ onepasswordRead "op://zsh/campfire_supabase/url" }}"
 export CAMPFIRE_SUPABASE_SERVICE_ROLE_KEY="{{ onepasswordRead "op://zsh/campfire_supabase/service_role_key" }}"
 export CAMPFIRE_R2_BUCKET_NAME="{{ onepasswordRead "op://zsh/campfire_r2/bucket_name" }}"

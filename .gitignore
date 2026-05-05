@@ -3,3 +3,6 @@
 
 # Machine-specific (not managed by chezmoi)
 dot_zsh/local.zsh
+
+# Claude Code local state
+.claude/
