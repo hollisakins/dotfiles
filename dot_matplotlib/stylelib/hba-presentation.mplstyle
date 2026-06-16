@@ -1,5 +1,5 @@
 # hba-presentation — overrides for slides/talks
-# Larger text and bolder weights for readability on projected screens.
+# Larger text for readability on projected screens.
 # Switches to sans-serif (Helvetica) and disables usetex for portability.
 # Stackable — apply after hba and optionally hba-dark.
 #
@@ -8,10 +8,17 @@
 #   plt.style.use(['hba', 'hba-dark', 'hba-presentation'])
 
 # ── Font ─────────────────────────────────────────────────────────────────────
+# usetex is off here, so anything in $...$ (math, sci-notation exponents, the
+# unary minus on negative ticks) is drawn by matplotlib's mathtext engine, NOT
+# the body font. mathtext ignores font.sans-serif entirely — it follows
+# mathtext.fontset. We keep the body in DejaVu Sans so it matches mathtext's
+# default 'dejavusans' fontset (pinned explicitly so the match survives any
+# change to the matplotlib default).
 font.family             : sans-serif
-font.sans-serif         : Helvetica
-font.size               : 12
+font.sans-serif         : DejaVu Sans
+font.size               : 8
 font.weight             : bold
-legend.fontsize         : 10
+legend.fontsize         : 7
 text.usetex             : False
 axes.labelweight        : bold
+mathtext.fontset        : dejavusans
