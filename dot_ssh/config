@@ -3,8 +3,8 @@ Host *
   ServerAliveCountMax 3
 
 Host patrick
-  HostName 10.149.221.56
-  User hba423
+  HostName patrick.taild98e94.ts.net
+  User hollis
   IdentityFile ~/.ssh/id_rsa_patrick
 
 Host candide
