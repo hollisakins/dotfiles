@@ -1,12 +1,19 @@
+# Keys for patrick, candide, princeton, campfire-prod live in 1Password (vault "zsh");
+# IdentityFile points at the .pub so the agent knows which key to offer.
+
 Host patrick
   HostName patrick.taild98e94.ts.net
   User hollis
-  IdentityFile ~/.ssh/id_rsa_patrick
+  IdentityFile ~/.ssh/id_rsa_patrick.pub
+  IdentitiesOnly yes
+  IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
 
 Host candide
   HostName candid03.iap.fr
   User hakins
-  IdentityFile ~/.ssh/id_rsa_candide
+  IdentityFile ~/.ssh/id_rsa_candide.pub
+  IdentitiesOnly yes
+  IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
   ProxyCommand sh -c 'ping -c 1 -s 999 %h; nc %h %p'
   ControlMaster auto
   ControlPath ~/.ssh/cm-%r@%h:%p
@@ -15,20 +22,18 @@ Host candide
 Host tigressgateway
   HostName tigressgateway.princeton.edu
   User ha4641
-  IdentityFile ~/.ssh/id_ed25519_princeton
+  IdentityFile ~/.ssh/id_ed25519_princeton.pub
   IdentitiesOnly yes
-  AddKeysToAgent yes
-  UseKeychain yes
+  IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
   ControlMaster auto
   ControlPath ~/.ssh/sockets/%C
   ControlPersist 8h
 
 Host della tiger
   User ha4641
-  IdentityFile ~/.ssh/id_ed25519_princeton
+  IdentityFile ~/.ssh/id_ed25519_princeton.pub
   IdentitiesOnly yes
-  AddKeysToAgent yes
-  UseKeychain yes
+  IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
   ProxyJump tigressgateway
   ControlMaster auto
   ControlPath ~/.ssh/sockets/%C
@@ -51,5 +56,6 @@ Host *
 Host campfire-prod
   HostName 149.165.174.96
   User exouser
-  IdentityFile ~/.ssh/campfire-prod
+  IdentityFile ~/.ssh/campfire-prod.pub
   IdentitiesOnly yes
+  IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"

@@ -32,8 +32,12 @@ Chezmoi naming conventions: `dot_` prefix → `.` in target, `.tmpl` suffix → 
 - `dot_config/git/ignore` → `~/.config/git/ignore` — global gitignore
 
 ### SSH
-- `dot_ssh/config` → `~/.ssh/config` — host aliases and identity file references
-- SSH keys are NOT managed — device-specific, can be stored in 1Password if needed
+- `dot_ssh/private_config` → `~/.ssh/config` — host aliases and identity file references
+- Private keys live in 1Password (vault "zsh") and are served by the 1Password SSH agent; they are never on disk
+  - Hosts using them set `IdentityAgent` to the 1Password socket and `IdentityFile` to the key's `.pub` (managed in `dot_ssh/`)
+  - `dot_config/private_1Password/ssh/agent.toml` lets the agent serve the "zsh" vault (default is Private only)
+  - Per machine: enable 1Password → Settings → Developer → "Use the SSH agent"
+- Hosts whose keys aren't in 1Password yet (e.g. ls6) still expect the private key file in `~/.ssh/`
 
 ### Apps (`dot_config/` → `~/.config/`)
 - `ghostty/config` — terminal: Catppuccin theme, Monaspace font, transparency, keybinds
@@ -57,7 +61,7 @@ Chezmoi naming conventions: `dot_` prefix → `.` in target, `.tmpl` suffix → 
 - All secrets stored in 1Password vault "zsh", injected via `{{ onepasswordRead "op://zsh/..." }}` in `.tmpl` files
 - Never hardcode secrets or API keys anywhere in this repo
 - `gh/hosts.yml` is NOT managed — contains OAuth tokens
-- SSH keys are NOT managed — device-specific
+- SSH private keys are NOT stored in the repo — they live in 1Password
 
 ## Multi-machine (macOS vs Linux)
 - OS-specific content is gated with `{{ if eq .chezmoi.os "darwin" }}` in `.tmpl` files

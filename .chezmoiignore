@@ -6,4 +6,7 @@ Brewfile
 Library
 .config/ghostty
 .ssh/config
+.ssh/*.pub
+.ssh/sockets
+.config/1Password
 {{- end }}
