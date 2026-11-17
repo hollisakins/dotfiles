@@ -1,5 +1,5 @@
 # hba-pgf-times — PGF/LaTeX backend with Times-like font
-# Uses the PGF backend with TeX Gyre Termes (Times) + matching math font.
+# Uses the PGF backend with newtxtext + newtxmath (Times text and math).
 # Use instead of hba-pgf when the target document uses Times.
 #
 # Usage:
@@ -10,4 +10,6 @@ font.serif              : TeX Gyre Termes
 
 # ── PGF backend ──────────────────────────────────────────────────────────────
 pgf.rcfonts             : False
-pgf.preamble            : \usepackage{unicode-math} \setmainfont{TeX Gyre Termes} \setmathfont{TeX Gyre Termes Math}
+# newtx, not TeX Gyre Termes Math: Termes Math's digits are loosely spaced and its sub/superscripts are
+# linear scale-downs (wide, stretched); newtxmath has tight digits and script-size designs (2026-10-13)
+pgf.preamble            : \usepackage[T1]{fontenc} \usepackage{newtxtext,newtxmath}

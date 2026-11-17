@@ -1,1 +1,9 @@
 CLAUDE.md
+
+{{- if ne .chezmoi.os "darwin" }}
+# macOS-only
+Brewfile
+Library
+.config/ghostty
+.ssh/config
+{{- end }}

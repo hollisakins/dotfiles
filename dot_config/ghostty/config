@@ -16,7 +16,9 @@ font-family = "MonaspiceAr Nerd Font"
 font-size = 14
 
 # ── Window ────────────────────────────────────────────────────────────────────
-macos-titlebar-style = tabs
+# "tabs" style is broken on macOS 27 (ghostty-org/ghostty#14244); fixed in tip, not yet stable.
+# Switch back to "tabs" once a stable release ships the fix.
+macos-titlebar-style = transparent
 window-padding-x = 8
 window-padding-y = 6
 keybind = super+enter=toggle_split_zoom

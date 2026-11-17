@@ -12,10 +12,9 @@ alias idl=/Applications/exelis/idl/bin/idl
 alias galfit=~/codes/galfit
 alias apt="/Applications/APT\ 2026.3.1/bin/apt"
 
-# Overrides
-alias vim=nvim
-alias ls=lsd
-alias lsl="lsd -l"
+# Overrides (only where the replacement is installed)
+(( $+commands[nvim] )) && alias vim=nvim
+(( $+commands[lsd] )) && alias ls=lsd && alias lsl="lsd -l"
 
 # Utilities
 alias disk='duf / /Volumes/maurice /Volumes/simmons'

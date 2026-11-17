@@ -1,0 +1,21 @@
+# zsh-z has no Homebrew formula, so it is cloned on every OS
+[".zsh/plugins/zsh-z"]
+    type = "git-repo"
+    url = "https://github.com/agkozak/zsh-z.git"
+    refreshPeriod = "168h"
+{{- if ne .chezmoi.os "darwin" }}
+# remaining zsh plugins (Homebrew provides these on macOS)
+[".zsh/plugins/powerlevel10k"]
+    type = "git-repo"
+    url = "https://github.com/romkatv/powerlevel10k.git"
+    refreshPeriod = "168h"
+    clone.args = ["--depth", "1"]
+[".zsh/plugins/zsh-autosuggestions"]
+    type = "git-repo"
+    url = "https://github.com/zsh-users/zsh-autosuggestions.git"
+    refreshPeriod = "168h"
+[".zsh/plugins/zsh-syntax-highlighting"]
+    type = "git-repo"
+    url = "https://github.com/zsh-users/zsh-syntax-highlighting.git"
+    refreshPeriod = "168h"
+{{- end }}
